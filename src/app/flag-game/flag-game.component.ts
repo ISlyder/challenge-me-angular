@@ -66,7 +66,6 @@ export class FlagGameComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe( result => {
       if (result) {
-        console.log(result);
         localStorage.removeItem('test');
       }
     });
