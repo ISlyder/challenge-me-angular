@@ -1,0 +1,22 @@
+@import "../../bootstrap/bootstrap";
+
+$width: 250px;
+
+img {
+  width: $width;
+  height: 150px;
+  margin: 0;
+}
+
+.flag-container {
+  background-color: $tertiary;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.name-container {
+  padding-left: 20px;
+  min-height: 50px;
+  max-height: 50px;
+  max-width: $width;
+}

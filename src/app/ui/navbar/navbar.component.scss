@@ -1,0 +1,39 @@
+@import "../../../bootstrap/bootstrap";
+
+:host {
+  display: flex;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  text-align: center;
+  cursor: pointer;
+  a {
+    color: $primary-text;
+    &:link {
+      text-decoration: none;
+    }
+  }
+}
+
+.fa-globe-americas {
+  margin: 10px;
+  &:hover {
+    animation: rotate 1s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,29 @@
+<div class="check-container">
+  <h2 class="check-title">Trier par continent</h2>
+  <div
+    class="form-check form-check-inline"
+    *ngFor="let continent of continents">
+    <label>
+      <input
+        class="form-check-input"
+        type="radio"
+        name="region"
+        value="{{ continent }}"
+        (change)="checkValue($event)"
+      />
+      {{ continent }}
+    </label>
+  </div>
+</div>
+
+<h2 class="text-center">{{ displayedCountries.length }} pays</h2>
+
+<p class="text-center mt-3">{{'COMMON.TRAINING_DESCRIPTION' | translate}}</p>
+
+<div class="d-flex flex-wrap align-items-center justify-content-center">
+  <ng-container *ngFor="let c of displayedCountries; let index=index;">
+    <chal-flag [country]="c"
+               [defaultDisplay]="false">
+    </chal-flag>
+  </ng-container>
+</div>

@@ -1,0 +1,31 @@
+<div class="d-flex flex-wrap align-items-center justify-content-center">
+  <div *ngIf="defaultDisplay==true else displayFalse"
+       class="flag-container m-3">
+    <img src="{{ country.flag }}" alt="flag"/>
+    <div class="text-white name-container">
+      <p class="mb-0" *ngIf="display">
+        {{ 'COUNTRY.' + country.name | translate }}
+      </p>
+      <p class="mb-0 fst-italic" *ngIf="display">
+        <!--{{ c.capital.length > 25 ? (c.capital | slice: 0:15) : c.capital }}-->
+        capital
+      </p>
+    </div>
+  </div>
+  <ng-template #displayFalse>
+    <div class="flag-container m-3"
+         (mouseenter)="displayInfos()"
+         (mouseleave)="hideInfos()">
+      <img src="{{ country.flag }}" alt="flag"/>
+      <div class="text-white name-container">
+        <p class="mb-0" *ngIf="display">
+          {{ 'COUNTRY.' + country.name | translate }}
+        </p>
+        <p class="mb-0 fst-italic" *ngIf="display">
+          <!--{{ c.capital.length > 25 ? (c.capital | slice: 0:15) : c.capital }}-->
+          capital
+        </p>
+      </div>
+    </div>
+  </ng-template>
+</div>

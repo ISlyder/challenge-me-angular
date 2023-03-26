@@ -1,0 +1,20 @@
+.flag-container {
+  position: relative;
+}
+
+.flag {
+  width: 600px;
+  height: 100%;
+}
+
+.btn-skip {
+  position: absolute;
+  right: -120px;
+  width: 100px;
+}
+
+.result-container {
+  font-size: large;
+  padding-left: 25%;
+  padding-right: 25%;
+}

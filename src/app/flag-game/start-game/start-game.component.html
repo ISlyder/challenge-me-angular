@@ -1,0 +1,13 @@
+<div class="form-container">
+  <h1>{{'COMMON.START_DESCRIPTION' | translate}}</h1>
+  <form [formGroup]="gameForm">
+    <mat-form-field appearance="standard">
+      <mat-label>{{'COMMON.PSEUDO' | translate}}</mat-label>
+      <input matInput
+             formControlName="pseudo">
+    </mat-form-field>
+    <button mat-button
+            class="btn-primary"
+            (click)="startGame()">{{'COMMON.START' | translate}}</button>
+  </form>
+</div>
